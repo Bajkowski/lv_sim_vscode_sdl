@@ -9,12 +9,15 @@ void start_ui() {
     draw_main_widgets();
 }
 
-void draw_screen() {
 
+void draw_screen() {
+    base_screen = lv_obj_create(NULL);
+    lv_scr_load(base_screen);
+    lv_obj_set_style_bg_color(base_screen, lv_color_black(), 0);
 }
 
 void draw_main_widgets() {
-    lv_obj_t * btn = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_t * btn = lv_btn_create(base_screen);     /*Add a button the current screen*/
     lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
     lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
     lv_obj_add_event_cb(btn, btn_event_cb, LV_EVENT_ALL, NULL);           /*Assign a callback to the button*/

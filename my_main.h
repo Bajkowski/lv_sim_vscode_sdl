@@ -12,6 +12,10 @@
 #include <SDL2/SDL.h>
 #include "lvgl/lvgl.h"
 
+// Global objects
+lv_obj_t * base_screen;
+
+
 // Main draw functions
 void start_ui();
 void draw_screen();
