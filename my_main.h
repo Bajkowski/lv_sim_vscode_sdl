@@ -1,4 +1,3 @@
-
 /**
  * @file my_main.h
  *
@@ -13,6 +12,10 @@
 #include <SDL2/SDL.h>
 #include "lvgl/lvgl.h"
 
+// Main draw functions
+void start_ui();
+void draw_screen();
+void draw_main_widgets();
 
-void lv_example_get_started_111(void);
+// Button handlers
 void btn_event_cb(lv_event_t * e);
